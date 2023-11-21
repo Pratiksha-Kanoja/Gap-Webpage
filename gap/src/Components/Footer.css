@@ -1,0 +1,68 @@
+.Footer-container{
+    height: 460px;
+    color: white;
+    background-color: black;
+}
+.Footercontainer-top{
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    border-bottom: 1px solid white;
+    margin-top: 30px;
+    padding-bottom: 70px;
+}
+.FC-topfirst{
+    width: 25%;
+}
+.FC-topheading{
+    font-size: 18px;
+    font-weight: 600;
+}
+.FC-topfirst>div{
+    display: flex;
+}
+.FC-topfirst>div>input{
+    width: 70%;
+    height: 30px;
+    margin-top: 10px;
+    background-color: black;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+}
+.FC-topfirst>div>button{
+    width: 20%;
+    margin-left: 10px;
+    height: 33px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.FC-topfirst>p:nth-child(3){
+    margin-top: 20px;
+    text-decoration: underline;
+}
+.FC-topsecond{
+    width: 20%;
+    margin-left: 40px;
+}
+.FC-topthird{
+    width: 20%;
+}
+.FC-topforth{
+    width: 20%;
+}
+.FC-toplink{
+    margin-top: 5px;
+    font-size: 15px;
+}
+.Footercontainer-bottom{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.Footercontainer-bottom>p:nth-child(1){
+    margin-top: 50px;
+}
+.Footercontainer-bottom>p:nth-child(2){
+    margin-top: 25px;
+}
