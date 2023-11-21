@@ -1,0 +1,155 @@
+.Homepage-container{
+    background-color: black;
+}
+.Homepage-body{
+    height: auto;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 35px;
+}
+.body-first>p:nth-child(1){
+    font-family: Roboto;
+    font-size: 33px;
+}
+.body-first>p:nth-child(2){
+    font-size: 110px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+.body-first>p:nth-child(3){
+    margin-top: 10px;
+    font-size: 13px;
+    color: rgb(193, 193, 193);
+}
+.body-first>div{
+    display: flex;
+}
+.body-first>div{
+    margin-top: 35px;
+}
+.body-first>div>button{
+    margin-right: 8px;
+    height: 40px;
+    padding: 0px 10px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background-color: white;
+}
+
+
+.body-second{
+    margin-top: 110px;
+}
+.body-second>p:nth-child(1){
+    font-size: 50px;
+    font-weight: 400;
+}
+.body-second>p:nth-child(2){
+    margin-top: 10px;
+}
+.dealproduct{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.dealproduct>div{
+    width: 49%;
+    height: 900px;
+    margin-top: 20px;
+}
+.dealproduct>div>div:nth-child(1){
+    height: 85%;
+}
+.dealproduct>div>div:nth-child(1)>img{
+    width: 100%;
+    height: 100%;
+}
+.dealpro-title{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.dealpro-title>div>p:nth-child(1){
+    font-size: 40px;
+}
+.dealpro-title>div>p:nth-child(2){
+    font-size: 20px;
+    margin-top: 5px;
+}
+.dealpro-title>button{
+    height: 40px;
+    margin-top: 10px;
+    padding: 0px 16px;
+    font-size: 15px;
+    background-color: white;
+    border: none;
+}
+
+.body-third{
+    height: auto;
+    width: 86%;
+    margin: auto;
+    margin-top: 50px;
+}
+.body-third>p:nth-child(1){
+    font-size: 19px;
+    font-weight: 500;
+}
+.body-third>div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.bodythird-img{
+    width: 19%;
+}
+.bodythird-img>div{
+    height: 300px;
+}
+.bodythird-img>div>img{
+    width: 100%;
+    height: 100%;
+}
+.bodythird-img>p{
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.body-forth{
+    height: 1000px;
+    width: 86%;
+    margin: auto;
+    margin-top: 110px;
+    margin-bottom: 130px;
+}
+.body-forth>p:nth-child(1){
+    font-size: 19px;
+    font-weight: 500;
+}
+.body-forth>div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.bodyforth-img{
+    width: 23%;
+    margin-top: 40px;
+}
+.bodyforth-img>div{
+    height: 390px;
+}
+.bodyforth-img>div>img{
+    width: 100%;
+    height: 100%;
+}
+.bodyforth-img>p{
+    margin-top: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+}
