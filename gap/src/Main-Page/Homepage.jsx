@@ -1,9 +1,29 @@
-import React from 'react'
 import Header from '../Components/Header'
 import './Homepage.css'
 import Footer from '../Components/Footer'
+import React, { useEffect, useState } from 'react'
+import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
+import api from '../Helper/AxiosConfig';
 
 const Homepage = () => {
+  const router = useNavigate()
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    async function getProducts() {
+      try {
+        const { data } = await api.get('/products/get-all-product');
+
+        if (data.success) {
+          setProducts(data.products)
+        }
+      } catch (error) {
+        toast.error(error.data.message)
+      }
+    }
+    getProducts()
+  }, [])
   return (
     <div className='Homepage-container'>
       <Header />
@@ -27,57 +47,24 @@ const Homepage = () => {
         <div className='body-second'>
           <p>60% Off Really Big Deals</p>
           <p>For wrapping & keeping.</p>
-          <div className='dealproduct'>
-            <div>
+          {products?.length ? <div className='dealproduct'>
+            {products.map((pro) => (
               <div>
-                <img src="https://gapprod.a.bigcontent.io/v1/static/20231120_BF_Sweaters_Hover_DESK" alt="" />
-              </div>
-              <div className='dealpro-title'>
                 <div>
-                  <p>Sweaters from $22</p>
-                  <p>Kids' & Baby from $15</p>
+                  <img src={pro.image} alt="" />
                 </div>
-                <button>SHOP NOW +</button>
-              </div>
-            </div>
-
-            <div>
-              <div>
-                <img src="https://gapprod.a.bigcontent.io/v1/static/20231120_BF_Sweats_Hover_DESK" alt="" />
-              </div>
-              <div className='dealpro-title'>
-                <div>
-                  <p>Sweats from $19</p>
-                  <p>Kids' & Baby from $12</p>
+                <div className='dealpro-title'>
+                  <div>
+                    <p>{pro.name} from ${pro.price}</p>
+                    <p>{pro.category} from $15</p>
+                  </div>
+                  <button>SHOP NOW +</button>
                 </div>
-                <button>SHOP NOW +</button>
               </div>
-            </div>
-            <div>
-              <div>
-                <img src="https://gapprod.a.bigcontent.io/v1/static/20231120_BF_Tees_Hover_DESK" alt="" />
-              </div>
-              <div className='dealpro-title'>
-                <div>
-                  <p>Tees from $12</p>
-                  <p>Kids' & Baby from $7</p>
-                </div>
-                <button>SHOP NOW +</button>
-              </div>
-            </div>
-            <div>
-              <div>
-                <img src="https://gapprod.a.bigcontent.io/v1/static/20231120_BF_PJs_Hover_DESK" alt="" />
-              </div>
-              <div className='dealpro-title'>
-                <div>
-                  <p>PJs from $15</p>
-                  <p>Kids' & Baby from $10</p>
-                </div>
-                <button>SHOP NOW +</button>
-              </div>
-            </div>
+            ))}
           </div>
+            :
+            <div></div>}
         </div>
 
         <div className='body-third'>
@@ -88,7 +75,7 @@ const Homepage = () => {
                 <img src="https://www.gap.com/webcontent/0027/627/901/cn27627901.jpg" alt="" />
               </div>
               <p>High Rise Cheeky Straight Jeans</p>
-              
+
             </div>
             <div className='bodythird-img'>
               <div>
@@ -117,7 +104,7 @@ const Homepage = () => {
           </div>
         </div>
 
-       {/* 4th */}
+        {/* 4th */}
 
         <div className='body-forth'>
           <p>Shop by Division</p>
@@ -127,7 +114,7 @@ const Homepage = () => {
                 <img src="https://gapprod.a.bigcontent.io/v1/static/HOL235662_Women_DESK" alt="" />
               </div>
               <p>WOMEN +</p>
-              
+
             </div>
             <div className='bodyforth-img'>
               <div>
@@ -175,7 +162,7 @@ const Homepage = () => {
         </div>
       </div>
 
-      <Footer/>    
+      <Footer />
     </div>
   )
 }
